@@ -1,23 +1,33 @@
-import accounting from "accounting";
+"use strict";
 
-const format = (num, offset) => {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _accounting = _interopRequireDefault(require("accounting"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var format = function format(num, offset) {
   if (!offset) {
     offset = 2;
   }
+
   if (num) {
-    return String(accounting.formatNumber(num, offset, ".", ","));
+    return String(_accounting["default"].formatNumber(num, offset, ".", ","));
   } else {
     return String(0);
   }
 };
 
-const unformat = val => {
-  let unformat1 = val.replace(".", "");
-  let unformat2 = unformat1.replace(",", ".");
+var unformat = function unformat(val) {
+  var unformat1 = val.replace(".", "");
+  var unformat2 = unformat1.replace(",", ".");
   return Number(unformat2);
 };
 
-const formatCurrency = (val, type) => {
+var formatCurrency = function formatCurrency(val, type) {
   if (type == "IDR") {
     return "IDR" + format(val, 2);
   } else {
@@ -25,4 +35,9 @@ const formatCurrency = (val, type) => {
   }
 };
 
-export default { format, unformat, formatCurrency };
+var _default = {
+  format: format,
+  unformat: unformat,
+  formatCurrency: formatCurrency
+};
+exports["default"] = _default;
