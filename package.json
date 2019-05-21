@@ -1,0 +1,26 @@
+{
+  "name": "indonesia-numbering-formatter",
+  "version": "0.0.1",
+  "description": "Number and currency formatter in Indonesia numbering system based on \"Pedoman Umum Ejaan Bahasa Indonesia\" (PUEBI)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "formatter",
+    "number",
+    "indonesia"
+  ],
+  "author": "I.B. Dwi Satria Kusuma",
+  "license": "ISC",
+  "peerDependencies": {
+    "accounting": "^0.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "accounting": "^0.4.1"
+  }
+}
