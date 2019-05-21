@@ -11,8 +11,16 @@
     "number",
     "indonesia"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dskusuma/indonesia-numbering-formatter.git"
+  },
   "author": "I.B. Dwi Satria Kusuma",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dskusuma/indonesia-numbering-formatter/issues"
+  },
+  "homepage": "https://github.com/dskusuma/indonesia-numbering-formatter",
   "peerDependencies": {
     "accounting": "^0.4.1"
   },
