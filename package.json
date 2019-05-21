@@ -1,6 +1,6 @@
 {
   "name": "indonesia-numbering-formatter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Number and currency formatter in Indonesia numbering system based on \"Pedoman Umum Ejaan Bahasa Indonesia\" (PUEBI)",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,9 @@
     "url": "https://github.com/dskusuma/indonesia-numbering-formatter/issues"
   },
   "homepage": "https://github.com/dskusuma/indonesia-numbering-formatter",
+  "dependencies": {
+    "accounting": "^0.4.1"
+  },
   "peerDependencies": {
     "accounting": "^0.4.1"
   },
