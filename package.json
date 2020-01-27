@@ -1,6 +1,6 @@
 {
   "name": "indonesia-numbering-formatter",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Number and currency formatter in Indonesia numbering system based on \"Pedoman Umum Ejaan Bahasa Indonesia\" (PUEBI)",
   "main": "index.js",
   "scripts": {
