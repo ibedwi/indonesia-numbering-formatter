@@ -1,5 +1,17 @@
 "use strict";
 
+var _index = _interopRequireDefault(require("../index"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+test('should return default value', function () {
+  expect(_index["default"].formatCurrency(3000)).toBe('Rp3.000');
+});
+test('given 3000 with decimal 2, should return "Rp3.000,00"', function () {
+  expect(_index["default"].formatCurrency(3000, 2)).toBe('Rp3.000,00');
+});
+"use strict";
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -11,7 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var format = function format(num, offset) {
   if (!offset) {
-    offset = 2;
+    offset = 0;
   }
 
   if (num) {
@@ -27,9 +39,10 @@ var unformat = function unformat(val) {
   return Number(unformat2);
 };
 
-var formatCurrency = function formatCurrency(val) {
-  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var type = arguments.length > 2 ? arguments[2] : undefined;
+var formatCurrency = function formatCurrency(val, offset, type) {
+  if (!offset) {
+    offset = 0;
+  }
 
   if (type == "IDR") {
     return "IDR" + format(val, offset);
