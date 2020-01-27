@@ -27,11 +27,14 @@ var unformat = function unformat(val) {
   return Number(unformat2);
 };
 
-var formatCurrency = function formatCurrency(val, type) {
+var formatCurrency = function formatCurrency(val) {
+  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  var type = arguments.length > 2 ? arguments[2] : undefined;
+
   if (type == "IDR") {
-    return "IDR" + format(val, 2);
+    return "IDR" + format(val, offset);
   } else {
-    return "Rp" + format(val, 2);
+    return "Rp" + format(val, offset);
   }
 };
 

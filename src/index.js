@@ -17,7 +17,7 @@ const unformat = val => {
   return Number(unformat2);
 };
 
-const formatCurrency = (val, type, offset = 2) => {
+const formatCurrency = (val, offset = 0, type) => {
   if (type == "IDR") {
     return "IDR" + format(val, offset);
   } else {
