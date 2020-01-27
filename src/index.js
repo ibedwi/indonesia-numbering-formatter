@@ -17,11 +17,11 @@ const unformat = val => {
   return Number(unformat2);
 };
 
-const formatCurrency = (val, type) => {
+const formatCurrency = (val, type, offset = 2) => {
   if (type == "IDR") {
-    return "IDR" + format(val, 2);
+    return "IDR" + format(val, offset);
   } else {
-    return "Rp" + format(val, 2);
+    return "Rp" + format(val, offset);
   }
 };
 
