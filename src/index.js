@@ -2,7 +2,7 @@ import accounting from "accounting";
 
 const format = (num, offset) => {
   if (!offset) {
-    offset = 2;
+    offset = 0;
   }
   if (num) {
     return String(accounting.formatNumber(num, offset, ".", ","));
@@ -17,7 +17,10 @@ const unformat = val => {
   return Number(unformat2);
 };
 
-const formatCurrency = (val, offset = 0, type) => {
+const formatCurrency = (val, offset, type) => {
+  if (!offset) {
+    offset = 0;
+  }
   if (type == "IDR") {
     return "IDR" + format(val, offset);
   } else {
