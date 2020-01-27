@@ -28,7 +28,7 @@ var unformat = function unformat(val) {
 };
 
 var formatCurrency = function formatCurrency(val) {
-  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   var type = arguments.length > 2 ? arguments[2] : undefined;
 
   if (type == "IDR") {
