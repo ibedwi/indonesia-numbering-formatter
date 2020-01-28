@@ -1,17 +1,5 @@
 "use strict";
 
-var _index = _interopRequireDefault(require("../index"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-test('should return default value', function () {
-  expect(_index["default"].formatCurrency(3000)).toBe('Rp3.000');
-});
-test('given 3000 with decimal 2, should return "Rp3.000,00"', function () {
-  expect(_index["default"].formatCurrency(3000, 2)).toBe('Rp3.000,00');
-});
-"use strict";
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });

@@ -1,4 +1,4 @@
-import idx from '../index';
+import idx from '../src/index';
 
 test('should return default value', () => {
   expect(idx.formatCurrency(3000)).toBe('Rp3.000')
