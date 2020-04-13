@@ -28,4 +28,12 @@ const formatCurrency = (val, offset, type) => {
   }
 };
 
-export default { format, unformat, formatCurrency };
+const formatNumberOnly = (val, offset) => {
+  if (!offset) {
+    offset = 0;
+  }
+
+  return format(val, offset);
+};
+
+export default { format, unformat, formatCurrency, formatNumberOnly };
