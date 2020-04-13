@@ -39,9 +39,18 @@ var formatCurrency = function formatCurrency(val, offset, type) {
   }
 };
 
+var formatNumberOnly = function formatNumberOnly(val, offset) {
+  if (!offset) {
+    offset = 0;
+  }
+
+  return format(val, offset);
+};
+
 var _default = {
   format: format,
   unformat: unformat,
-  formatCurrency: formatCurrency
+  formatCurrency: formatCurrency,
+  formatNumberOnly: formatNumberOnly
 };
 exports["default"] = _default;
